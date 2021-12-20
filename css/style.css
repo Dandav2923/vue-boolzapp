@@ -38,6 +38,11 @@ body{
 .column {
     flex-direction: column;
 }
+
+.inlineblock {
+    display: inline-block;
+}
+
 .width-10 {
     width: 10%;
 }
@@ -46,13 +51,22 @@ body{
     width: 20%;
 }
 
+.width-30 {
+    width: 30%;
+}
+
 .width-50 {
     width: 50%;
+}
+
+.width-80 {
+    width: 80%;
 }
 
 .width-90 {
     width: 90%;
 }
+
 .width-95 {
     width: 95%;
 }
@@ -119,12 +133,12 @@ body{
 .container-text-notify {
     width: 70%;
 }
-.container-text-notify .received {
+.received {
     font-size: 0.8em;
     font-weight: bold;
 }
 
-.container-text-notify .active {
+.active {
     font-size: 0.5em;
     text-decoration: underline;
     color: grey;
@@ -145,9 +159,30 @@ body{
     padding-top: 0.5em;
 }
 
-.container-img-text-chat {
-    
+.container-chat-user {
+    justify-content: space-between;
+    align-items: center;
 }
+
+.img-avatar-chat {
+    border-radius: 50%;
+    padding: 0.3em;
+}
+
+.container-text .active {
+    text-decoration: none;
+}
+
+.container-data {
+    font-size: 0.5em;
+}
+
+
+
+
+
+
+
 
 .container-right {
     width: 65%;
