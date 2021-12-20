@@ -15,17 +15,42 @@
     <div id="app">
         <main class="main d-flex">
             <div class="container-left">
-                <div class="header-left d-flex">
-                    <div class="container-img width-10">
-                        <img class="width-100" src="img/avatar_io.jpg" alt="">
-                    </div>
-                    <div class="container-text">
+                <div class="header-left d-flex height-50">
+                    <div class="container-img width-50 d-flex">
+                        <img class="width-20" src="img/avatar_io.jpg" alt="">
                         <span class="UserName">Nome Utente</span>
                     </div>
                     <div class="container-icons">
-                        <span class="icons"><i class="fas fa-circle-notch"></i></span>
-                        <span class="icons"><i class="fas fa-comment-alt"></i></span>
-                        <span class="icons"><i class="fas fa-ellipsis-v"></i></span>
+                        <i class="fas fa-circle-notch m-1"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v m-1"></i>
+                    </div>
+                </div>
+                <div class="container-new-notify height-50 d-flex bg-azure">
+                    <div class="container-fontawesome bg-white d-flex m-1">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div class="container-text-notify d-flex column">
+                        <span class="received">Ricevi notifiche di nuovi messaggi</span>
+                        <span class="active">Attiva notifiche desktop</span>
+                    </div>
+                </div>
+                <div class="container-chat-search width-100 bg-white d-flex height-30">
+                    <i class="fas fa-search width-10 ml-1"></i>
+                    <input class="input-chat width-90" type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <div class="container-chat bg-light-grey width-100">
+                    <div class="container-chat-user bg-white width-95 d-flex height-50">
+                        <div class="container-img-text-chat d-flex">
+                            <img class="" src="img/avatar_1.jpg" alt="">
+                            <span>Chat 1</span>
+                            <span>testo</span>
+                        </div>
+                        <div class="container-data">
+                            <span>
+                                10/01/2020 15:30:55
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
