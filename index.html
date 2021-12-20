@@ -40,24 +40,46 @@
                     <input class="input-chat width-90" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <div class="container-chat bg-light-grey width-100">
-                    <div class="container-chat-user bg-white width-95 d-flex height-50">
+                    <div v-for="element in contacts" class="container-chat-user bg-white width-95 d-flex height-50">
                         <div class="container-img-chat d-flex width-20">
-                            <img class="img-avatar-chat width-80" src="img/avatar_1.jpg" alt="">
+                            <img class="img-avatar-chat width-80" :src="`img/avatar${element.avatar}.jpg`" alt="">
                         </div>
                         <div class="container-text width-50">
-                            <span class="received">Michele</span>
+                            <span class="received">{{element.name}}</span>
                             <div class="active">
-                                Tutto fatto!
+                                {{element.text}}
                             </div> 
                         </div>
                         <div class="container-data width-30">
-                            10/01/2020 15:30:55
+                            {{element.date}}
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container-right">
-                
+                <div class="header-right d-flex height-50">
+                    <div class="container-img width-10 d-flex">
+                        <img class="width-50" src="img/avatar_1.jpg" alt="">
+                    </div>
+                    <div class="container-user width-70">
+                        <span class="UserName">Michele</span>
+                        <div class="last-access">
+                            Ultimo accesso oggi alle 10/01/2020 15:30:55
+                        </div>
+                    </div>
+                    <div class="container-icons width-20">
+                        <i class="fas fa-search m-1"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v m-1"></i>
+                    </div>
+                </div>
+                <div class="container-text-chat">
+                    <div class="container-text-contact"></div>
+                    <div class="container-text-user"></div>
+                </div>
+                <div class="container-footer-chat height-50 bg-white">
+
+                </div>
             </div>
         </main>
     </div>

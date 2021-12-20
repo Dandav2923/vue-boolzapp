@@ -39,10 +39,6 @@ body{
     flex-direction: column;
 }
 
-.inlineblock {
-    display: inline-block;
-}
-
 .width-10 {
     width: 10%;
 }
@@ -57,6 +53,10 @@ body{
 
 .width-50 {
     width: 50%;
+}
+
+.width-70 {
+    width: 70%;
 }
 
 .width-80 {
@@ -186,4 +186,19 @@ body{
 
 .container-right {
     width: 65%;
+}
+
+.header-right {
+    background-color: antiquewhite;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.last-access {
+    font-size: 0.5em;
+}
+
+.container-text-chat {
+    height: calc(100vh - 170px);
+    background-image: url(../img/mine.jpg);
 }
