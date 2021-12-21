@@ -61,7 +61,7 @@
             <div class="container-right">
                 <div class="header-right d-flex height-50">
                     <div class="container-img width-10 d-flex">
-                        <img class="width-50" src="img/avatar_1.jpg" alt="">
+                        <img class="width-50" :src="`img/avatar${contacts[counter].avatar}.jpg`" alt="">
                     </div>
                     <div class="container-user width-70">
                         <span class="UserName">{{contacts[counter].name}}</span>
@@ -77,7 +77,8 @@
                 </div>
                 <div class="container-text-chat">
                     <div v-for="elementMessage in contacts[counter].messages" class="message" :class="elementMessage.status == 'sent' ? 'sent' : ''">
-                        {{elementMessage.text}}
+                        <p>{{elementMessage.text}}</p>
+                        <p class="data">{{elementMessage.date}}</p>
                     </div>
                 </div>
                 <div class="container-footer-chat height-50 bg-light-grey d-flex">

@@ -206,10 +206,18 @@ body{
 .message {
     background-color: white;
     width: 60%;
+    height: 50px;
     margin: 10px 0;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+.message .data {
+    text-align: end;
+    font-size: 0.8em;
+    color: lightgray;
 }
 .message.sent {
-    background-color: chartreuse;
+    background-color: #d5f9ba;
     align-self: end;
 }
 
