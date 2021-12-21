@@ -39,7 +39,7 @@
                     <i class="fas fa-search width-10 ml-1"></i>
                     <input class="input-chat width-90" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
-                <div class="container-chat bg-light-grey width-100">
+                <div class="container-chat bg-white width-100">
                     <div v-for="element in contacts" class="container-chat-user bg-white width-95 d-flex height-50">
                         <div class="container-img-chat d-flex width-20">
                             <img class="img-avatar-chat width-80" :src="`img/avatar${element.avatar}.jpg`" alt="">
@@ -74,11 +74,37 @@
                     </div>
                 </div>
                 <div class="container-text-chat">
-                    <div class="container-text-contact"></div>
-                    <div class="container-text-user"></div>
+                    <div class="message">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maxime repudiandae quaerat veniam sapiente maiores,
+                        facilis deleniti corrupti amet quis repellat cumque, minus numquam pariatur? Officiis a facilis itaque
+                        assumenda?
+                    </div>
+                    <div class="message sent">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maxime repudiandae quaerat veniam sapiente maiores,
+                        facilis deleniti corrupti amet quis repellat cumque, minus numquam pariatur? Officiis a facilis itaque
+                        assumenda?
+                    </div>
+                    <div class="message">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maxime repudiandae quaerat veniam sapiente maiores,
+                        facilis deleniti corrupti amet quis repellat cumque, minus numquam pariatur? Officiis a facilis itaque
+                        assumenda?
+                    </div>
+                    <div class="message">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maxime repudiandae quaerat veniam sapiente maiores,
+                        facilis deleniti corrupti amet quis repellat cumque, minus numquam pariatur? Officiis a facilis itaque
+                        assumenda?
+                    </div>
                 </div>
-                <div class="container-footer-chat height-50 bg-white">
-
+                <div class="container-footer-chat height-50 bg-light-grey d-flex">
+                    <div class="emoticon d-flex">
+                        <i class="far fa-smile font-20 grey"></i>
+                    </div>
+                    <div class="container-input-chat d-flex width-80">
+                        <input class="input-chat width-100" type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                    <div class="voice d-flex">
+                        <i class="font-20 fas fa-microphone grey"></i>
+                    </div>
                 </div>
             </div>
         </main>

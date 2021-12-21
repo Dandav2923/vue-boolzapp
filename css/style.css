@@ -95,7 +95,6 @@ body{
     margin-left: 1em;
 }
 
-
 .container-left, .container-right {
     margin-top: 2.3em;
 }
@@ -177,13 +176,6 @@ body{
     font-size: 0.5em;
 }
 
-
-
-
-
-
-
-
 .container-right {
     width: 65%;
 }
@@ -199,6 +191,34 @@ body{
 }
 
 .container-text-chat {
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - 170px);
+    padding: 20px;
     background-image: url(../img/mine.jpg);
+    overflow-y: auto;
+}
+
+.message {
+    background-color: white;
+    width: 60%;
+    margin: 10px 0;
+}
+.message.sent {
+    background-color: chartreuse;
+    align-self: end;
+}
+
+.container-footer-chat {
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+.container-input-chat{
+    height: 80%;
+    border-radius: 10px;
+}
+
+.emoticon, .voice {
+    padding: 1em;
 }
