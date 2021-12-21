@@ -161,6 +161,10 @@ body{
 .container-chat-user {
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+}
+.container-chat-user:hover {
+    background-color: lightgrey;
 }
 
 .img-avatar-chat {
