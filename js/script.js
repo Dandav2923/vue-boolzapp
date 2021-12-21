@@ -92,7 +92,13 @@ const app = new Vue (
             ]
         },
         methods :{
-            
+            // devo ciclare sull'array dei messaggi per verificare lo status, se lo status del messaggio è ricevuto lo mettiamo in un array nuovo. Successivamente prendiamo l'ultimo elemento inserito e ci servirà per avere la data dell'ultimo messaggio
+            lastDate : function(messages) {
+                    const receivedMessages = messages.filter((message) => {
+                        return message.status =='received'});
+                        let messageLength = receivedMessages.length - 1;
+                        return receivedMessages[messageLength];
+            }
         }
     }
 )

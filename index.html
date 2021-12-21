@@ -42,7 +42,8 @@
                 <div  class="container-chat bg-white width-100">
                     <div @click="(counter = index)"
                         v-for="(element, index) in contacts"
-                        class="container-chat-user bg-white width-95 d-flex height-50">
+                        class="container-chat-user bg-white width-95 d-flex height-50"
+                        :class=" (counter == index) ? 'active' : '' ">
                         <div class="container-img-chat d-flex width-20">
                             <img class="img-avatar-chat width-80" :src="`img/avatar${element.avatar}.jpg`" alt="">
                         </div>
@@ -66,7 +67,7 @@
                     <div class="container-user width-70">
                         <span class="UserName">{{contacts[counter].name}}</span>
                         <div class="last-access">
-                            Ultimo accesso oggi alle {{}}
+                            Ultimo accesso oggi alle {{lastDate(contacts[counter].messages).date}}
                         </div>
                     </div>
                     <div class="container-icons width-20">
