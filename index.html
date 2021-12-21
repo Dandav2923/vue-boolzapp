@@ -39,8 +39,10 @@
                     <i class="fas fa-search width-10 ml-1"></i>
                     <input class="input-chat width-90" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
-                <div class="container-chat bg-white width-100">
-                    <div v-for="element in contacts" class="container-chat-user bg-white width-95 d-flex height-50">
+                <div  class="container-chat bg-white width-100">
+                    <div @click="(counter = index)"
+                        v-for="(element, index) in contacts" 
+                        class="container-chat-user bg-white width-95 d-flex height-50">
                         <div class="container-img-chat d-flex width-20">
                             <img class="img-avatar-chat width-80" :src="`img/avatar${element.avatar}.jpg`" alt="">
                         </div>
@@ -62,9 +64,9 @@
                         <img class="width-50" src="img/avatar_1.jpg" alt="">
                     </div>
                     <div class="container-user width-70">
-                        <span class="UserName">Michele</span>
+                        <span class="UserName">{{contacts[counter].name}}</span>
                         <div class="last-access">
-                            Ultimo accesso oggi alle 10/01/2020 15:30:55
+                            Ultimo accesso oggi alle {{}}
                         </div>
                     </div>
                     <div class="container-icons width-20">
@@ -74,25 +76,8 @@
                     </div>
                 </div>
                 <div class="container-text-chat">
-                    <div class="message">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maxime repudiandae quaerat veniam sapiente maiores,
-                        facilis deleniti corrupti amet quis repellat cumque, minus numquam pariatur? Officiis a facilis itaque
-                        assumenda?
-                    </div>
-                    <div class="message sent">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maxime repudiandae quaerat veniam sapiente maiores,
-                        facilis deleniti corrupti amet quis repellat cumque, minus numquam pariatur? Officiis a facilis itaque
-                        assumenda?
-                    </div>
-                    <div class="message">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maxime repudiandae quaerat veniam sapiente maiores,
-                        facilis deleniti corrupti amet quis repellat cumque, minus numquam pariatur? Officiis a facilis itaque
-                        assumenda?
-                    </div>
-                    <div class="message">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maxime repudiandae quaerat veniam sapiente maiores,
-                        facilis deleniti corrupti amet quis repellat cumque, minus numquam pariatur? Officiis a facilis itaque
-                        assumenda?
+                    <div v-for="elementMessage in contacts[counter].messages" class="message" :class="elementMessage.status == 'sent' ? 'sent' : ''">
+                        {{elementMessage.text}}
                     </div>
                 </div>
                 <div class="container-footer-chat height-50 bg-light-grey d-flex">
