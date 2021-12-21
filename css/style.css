@@ -137,7 +137,7 @@ body{
     font-weight: bold;
 }
 
-.active {
+.active-notify {
     font-size: 0.5em;
     text-decoration: underline;
     color: grey;
@@ -166,14 +166,19 @@ body{
 .container-chat-user:hover {
     background-color: lightgrey;
 }
+.container-chat-user.active {
+    background-color: lightgrey;
+}
 
 .img-avatar-chat {
     border-radius: 50%;
     padding: 0.3em;
 }
 
-.container-text .active {
-    text-decoration: none;
+.container-text .last-message {
+    color: grey;
+    font-size: 0.5em;
+
 }
 
 .container-data {

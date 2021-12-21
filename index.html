@@ -32,7 +32,7 @@
                     </div>
                     <div class="container-text-notify d-flex column">
                         <span class="received">Ricevi notifiche di nuovi messaggi</span>
-                        <span class="active">Attiva notifiche desktop</span>
+                        <span class="active-notify">Attiva notifiche desktop</span>
                     </div>
                 </div>
                 <div class="container-chat-search width-100 bg-white d-flex height-30">
@@ -41,14 +41,14 @@
                 </div>
                 <div  class="container-chat bg-white width-100">
                     <div @click="(counter = index)"
-                        v-for="(element, index) in contacts" 
+                        v-for="(element, index) in contacts"
                         class="container-chat-user bg-white width-95 d-flex height-50">
                         <div class="container-img-chat d-flex width-20">
                             <img class="img-avatar-chat width-80" :src="`img/avatar${element.avatar}.jpg`" alt="">
                         </div>
                         <div class="container-text width-50">
                             <span class="received">{{element.name}}</span>
-                            <div class="active">
+                            <div class="last-message">
                                 {{element.messages[(element.messages.length - 1)].text}}
                             </div> 
                         </div>
