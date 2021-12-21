@@ -47,11 +47,11 @@
                         <div class="container-text width-50">
                             <span class="received">{{element.name}}</span>
                             <div class="active">
-                                {{element.messages.text}}
+                                {{element.messages[(element.messages.length - 1)].text}}
                             </div> 
                         </div>
                         <div class="container-data width-30">
-                            {{element.messages.date}}
+                            {{element.messages[(element.messages.length - 1)].date}}
                         </div>
                     </div>
                 </div>
