@@ -87,7 +87,11 @@
                         <i class="far fa-smile font-20 grey"></i>
                     </div>
                     <div class="container-input-chat d-flex width-80">
-                        <input class="input-chat width-100" type="text" placeholder="Scrivi un messaggio">
+                        <input 
+                        @keyup.enter="newElement" 
+                        class="input-chat width-100" 
+                        type="text" 
+                        placeholder="Scrivi un messaggio">
                     </div>
                     <div class="voice d-flex">
                         <i class="fas fa-microphone"></i>

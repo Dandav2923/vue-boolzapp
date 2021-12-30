@@ -25,6 +25,11 @@ const app = new Vue (
                             text: "Tutto fatto!",
                             status: "received",
                         },
+                        {
+                            date: "10/01/2020 17:35:22",
+                            text: '',
+                            status: "received"
+                        }
                     ],
                 },
                 {
@@ -47,6 +52,11 @@ const app = new Vue (
                             text: "Mi piacerebbe ma devo andare a fare la spesa.",
                             status: "sent",
                         },
+                        {
+                            date: "10/01/2020 17:35:22",
+                            text: '',
+                            status: "received"
+                        }
                     ],
                 },
 
@@ -70,6 +80,11 @@ const app = new Vue (
                             text: "Ah scusa!",
                             status: "received",
                         },
+                        {
+                            date: "10/01/2020 17:35:22",
+                            text: '',
+                            status: "received"
+                        }
                     ],
                 },
                 {
@@ -87,6 +102,11 @@ const app = new Vue (
                             text: "Si, ma preferirei andare al cinema",
                             status: "received",
                         },
+                        {
+                            date: "10/01/2020 17:35:22",
+                            text: '',
+                            status: "received"
+                        }
                     ],
                 },
             ]
@@ -98,6 +118,18 @@ const app = new Vue (
                         return message.status =='received'});
                         let messageLength = receivedMessages.length - 1;
                         return receivedMessages[messageLength];
+            },
+            newElement: function () {
+
+            //     if (this.contacts.messages[this.contacts.messages.length - 1].text != '') {
+            //         const ListElementObj = {
+            //             date: "10/01/2020 17:35:22",
+            //             text: '',
+            //             status: "received"
+            //         }
+            //         this.contacts.messages.push(ListElementObj);
+            //     }
+                console.log(this.contacts[c].messages);
             }
         }
     }
