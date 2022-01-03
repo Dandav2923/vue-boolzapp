@@ -4,6 +4,7 @@ const app = new Vue (
         el: '#app',
         data: {
             counter : 0,
+            newMessage: '',
             contacts: [
                 {
                     name: "Michele",
@@ -25,11 +26,6 @@ const app = new Vue (
                             text: "Tutto fatto!",
                             status: "received",
                         },
-                        {
-                            date: "10/01/2020 17:35:22",
-                            text: '',
-                            status: "received"
-                        }
                     ],
                 },
                 {
@@ -52,11 +48,6 @@ const app = new Vue (
                             text: "Mi piacerebbe ma devo andare a fare la spesa.",
                             status: "sent",
                         },
-                        {
-                            date: "10/01/2020 17:35:22",
-                            text: '',
-                            status: "received"
-                        }
                     ],
                 },
 
@@ -80,11 +71,6 @@ const app = new Vue (
                             text: "Ah scusa!",
                             status: "received",
                         },
-                        {
-                            date: "10/01/2020 17:35:22",
-                            text: '',
-                            status: "received"
-                        }
                     ],
                 },
                 {
@@ -102,11 +88,6 @@ const app = new Vue (
                             text: "Si, ma preferirei andare al cinema",
                             status: "received",
                         },
-                        {
-                            date: "10/01/2020 17:35:22",
-                            text: '',
-                            status: "received"
-                        }
                     ],
                 },
             ]
@@ -120,16 +101,16 @@ const app = new Vue (
                         return receivedMessages[messageLength];
             },
             newElement: function () {
-
-            //     if (this.contacts.messages[this.contacts.messages.length - 1].text != '') {
-            //         const ListElementObj = {
-            //             date: "10/01/2020 17:35:22",
-            //             text: '',
-            //             status: "received"
-            //         }
-            //         this.contacts.messages.push(ListElementObj);
-            //     }
-                console.log(this.contacts[c].messages);
+                if (this.newMessage.trim().length > 0) {
+                    this.contacts[this.counter].messages.push(
+                        {
+                        date: "15/01/2020 15:50:00",
+                        text: this.newMessage,
+                        status: "sent",
+                    }
+                    );
+                    this.newMessage = '';
+                }
             }
         }
     }
