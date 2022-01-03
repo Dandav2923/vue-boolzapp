@@ -110,6 +110,14 @@ const app = new Vue (
                     }
                     );
                     this.newMessage = '';
+                    setTimeout(() => { 
+                        this.contacts[this.counter].messages.push(
+                            {
+                                date: "20/01/2020 15:50:00",
+                                text: 'ok',
+                                status: "received",
+                            }
+                    )}, 1000);
                 }
             }
         }
