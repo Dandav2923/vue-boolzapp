@@ -80,9 +80,19 @@
                     </div>
                 </div>
                 <div class="container-text-chat">
-                    <div v-for="elementMessage in contacts[counter].messages" class="message" :class="elementMessage.status == 'sent' ? 'sent' : ''">
+                    <div 
+                        v-for="elementMessage in contacts[counter].messages"            class="message" 
+                        :class="elementMessage.status == 'sent' ? 'sent' : ''">
                         <p>{{elementMessage.text}}</p>
                         <p class="data">{{elementMessage.date}}</p>
+                        <div class="dropdown">
+                            <span><i class="dropbtn fas fa-chevron-down"></i></span>
+                            <div class="dropdown-content">
+                                <p>Modifica Messaggio</p>
+                                <p>Elimina Messaggio</p>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="container-footer-chat height-50 bg-light-grey d-flex">
