@@ -4,6 +4,7 @@ const app = new Vue (
         el: '#app',
         data: {
             counter : 0,
+            counterB :0,
             newMessage: '',
             contacts: [
                 {
@@ -15,16 +16,19 @@ const app = new Vue (
                             date: "10/01/2020 15:30:55",
                             text: "Hai portato a spasso il cane?",
                             status: "sent",
+                            dropVisible: false
                         },
                         {
                             date: "10/01/2020 15:50:00",
                             text: "Ricordati di dargli da mangiare",
                             status: "sent",
+                            dropVisible: false
                         },
                         {
                             date: "10/01/2020 16:15:22",
                             text: "Tutto fatto!",
                             status: "received",
+                            dropVisible: false
                         },
                     ],
                 },
@@ -37,16 +41,19 @@ const app = new Vue (
                             date: "20/03/2020 16:30:00",
                             text: "Ciao come stai?",
                             status: "sent",
+                            dropVisible: false
                         },
                         {
                             date: "20/03/2020 16:30:55",
                             text: "Bene grazie! Stasera ci vediamo?",
                             status: "received",
+                            dropVisible: false
                         },
                         {
                             date: "20/03/2020 16:35:00",
                             text: "Mi piacerebbe ma devo andare a fare la spesa.",
                             status: "sent",
+                            dropVisible: false
                         },
                     ],
                 },
@@ -60,16 +67,19 @@ const app = new Vue (
                             date: "28/03/2020 10:10:40",
                             text: "La Marianna va in campagna",
                             status: "received",
+                            dropVisible: false
                         },
                         {
                             date: "28/03/2020 10:20:10",
                             text: "Sicuro di non aver sbagliato chat?",
                             status: "sent",
+                            dropVisible: false
                         },
                         {
                             date: "28/03/2020 16:15:22",
                             text: "Ah scusa!",
                             status: "received",
+                            dropVisible: false
                         },
                     ],
                 },
@@ -82,11 +92,13 @@ const app = new Vue (
                             date: "10/01/2020 15:30:55",
                             text: "Lo sai che ha aperto una nuova pizzeria?",
                             status: "sent",
+                            dropVisible: false
                         },
                         {
                             date: "10/01/2020 15:50:00",
                             text: "Si, ma preferirei andare al cinema",
                             status: "received",
+                            dropVisible: false
                         },
                     ],
                 },
@@ -107,6 +119,7 @@ const app = new Vue (
                         date: "15/01/2020 15:50:00",
                         text: this.newMessage,
                         status: "sent",
+                        dropVisible: false
                     }
                     );
                     this.newMessage = '';
@@ -116,13 +129,20 @@ const app = new Vue (
                                 date: "20/01/2020 15:50:00",
                                 text: 'ok',
                                 status: "received",
+                                dropVisible: false
                             }
                     )}, 1000);
                 }
             },
-            deleteMessage (index){
-                // console.log(this.contacts[this.counter].messages);
-                this.contacts[this.counter].messages.splice([index], 1);
+            menuDropdown (index){
+                this.counterB = index;
+                this.contacts[this.counter].messages[this.counterB].dropVisible = !this.contacts[this.counter].messages[this.counterB].dropVisible;
+                // console.log(this.contacts[this.counter].messages[this.counterB].dropVisible);
+
+            },
+            deleteMessage (){
+                this.contacts[this.counter].messages.splice(this.counterB, 1);
+                
             }
         }
     }
