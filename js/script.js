@@ -7,6 +7,7 @@ const app = new Vue (
             counterB :0,
             newMessage: '',
             valueInput:'',
+            isClicked: false,
             contacts: [
                 {
                     name: "Michele",
@@ -139,13 +140,14 @@ const app = new Vue (
                 }
             },
             // utilizziamo il valore di index nella nuova variabile per girare sull'array dei messaggi, successivamente cambio il valore della varibile booleana diversa da se stessa 
-            menuDropdown (index){
-                this.counterB = index;
-                this.contacts[this.counter].messages[this.counterB].dropVisible = !this.contacts[this.counter].messages[this.counterB].dropVisible;
+            // menuDropdown (index){
+                // this.counterB = index;
+                // this.contacts[this.counter].messages[this.counterB].dropVisible = !this.contacts[this.counter].messages[this.counterB].dropVisible;
                 // console.log(this.contacts[this.counter].messages[this.counterB].dropVisible);
-            },
+            // },
             // Elimino un elemento specifico dall'array
-            deleteMessage (){
+            deleteMessage (index){
+                this.counterB = index;
                 this.contacts[this.counter].messages.splice(this.counterB, 1);
             },
             // ricerca degli elementi
