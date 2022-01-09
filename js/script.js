@@ -6,6 +6,7 @@ const app = new Vue (
             counter : 0,
             counterB :0,
             newMessage: '',
+            valueInput:'',
             contacts: [
                 {
                     name: "Michele",
@@ -143,6 +144,16 @@ const app = new Vue (
             deleteMessage (){
                 this.contacts[this.counter].messages.splice(this.counterB, 1);
                 
+            },
+            searchContact : function() {
+                this.contacts.forEach(element => {
+                    if (element.name.toLowerCase().includes(this.valueInput.toLowerCase())){
+                        element.visible = true;
+                    }
+                    else {
+                        element.visible = false;
+                    }
+                });
             }
         }
     }

@@ -38,6 +38,8 @@
                 <div class="container-chat-search width-100 bg-white d-flex height-30">
                     <i class="fas fa-search width-10 ml-1"></i>
                     <input 
+                    @keyup="searchContact"
+                    v-model="valueInput"
                     class="input-chat width-90" 
                     type="text" 
                     placeholder="Cerca o inizia una nuova chat">
@@ -45,6 +47,7 @@
                 <div  class="container-chat bg-white width-100">
                     <div @click="(counter = index)"
                         v-for="(element, index) in contacts"
+                        v-if=element.visible
                         class="container-chat-user bg-white width-95 d-flex height-50"
                         :class=" (counter == index) ? 'active' : '' ">
                         <div class="container-img-chat d-flex width-20">
