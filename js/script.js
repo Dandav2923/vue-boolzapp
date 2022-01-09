@@ -113,7 +113,9 @@ const app = new Vue (
                         let messageLength = receivedMessages.length - 1;
                         return receivedMessages[messageLength];
             },
+            // aggiungere un elemento nuovo nella chat tramite input
             newElement: function () {
+                // controllo dell'input che non sia vuoto 
                 if (this.newMessage.trim().length > 0) {
                     this.contacts[this.counter].messages.push(
                         {
@@ -124,6 +126,7 @@ const app = new Vue (
                     }
                     );
                     this.newMessage = '';
+                    // risposta automatica dopo un tot di secondi 
                     setTimeout(() => { 
                         this.contacts[this.counter].messages.push(
                             {
@@ -135,16 +138,17 @@ const app = new Vue (
                     )}, 1000);
                 }
             },
+            // utilizziamo il valore di index nella nuova variabile per girare sull'array dei messaggi, successivamente cambio il valore della varibile booleana diversa da se stessa 
             menuDropdown (index){
                 this.counterB = index;
                 this.contacts[this.counter].messages[this.counterB].dropVisible = !this.contacts[this.counter].messages[this.counterB].dropVisible;
                 // console.log(this.contacts[this.counter].messages[this.counterB].dropVisible);
-
             },
+            // Elimino un elemento specifico dall'array
             deleteMessage (){
                 this.contacts[this.counter].messages.splice(this.counterB, 1);
-                
             },
+            // ricerca degli elementi
             searchContact : function() {
                 this.contacts.forEach(element => {
                     if (element.name.toLowerCase().includes(this.valueInput.toLowerCase())){
